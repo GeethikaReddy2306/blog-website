@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Main Page</title>
+        <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+       <h1>Blog Website</h1>
+      
+        <% for(let posts of post ){%>
+                <h2><%=posts.name%></h2> 
+                <p><%=posts.post%></p>
+                <button ><a href="http://localhost:3000/viewposts">view post</a></button>
+<%}%>
+                
+
+              <br> <br> <button><a href="http://localhost:3000/posts">Create a new post</a></button>
+</body>
+</html>

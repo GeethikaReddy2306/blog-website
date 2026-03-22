@@ -42,8 +42,12 @@ app.post('/posts',(req,res)=>{
       
         res.redirect('/')
 })
-app.get('/viewpost:/id',(req,res)=>{
-        res.render('fullpost',{post})
+app.get('/posts/:id',(req,res)=>{
+        let id=parsInt(req.params.id);
+        
+       let foundPost = post.find(p => p.id === id);
+        res.render('fullpost',{post:foundPost})
+       // res.send('request working')
         
 })
 app.listen(port,()=>{
